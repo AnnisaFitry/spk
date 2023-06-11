@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 07:46 AM
+-- Generation Time: Jun 11, 2023 at 04:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -148,19 +148,6 @@ INSERT INTO `calon_subkriteria` (`id`, `calon_id`, `subkriteria_id`, `value`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hasil_seleksi`
---
-
-CREATE TABLE `hasil_seleksi` (
-  `id` int(11) NOT NULL,
-  `nilai` int(11) NOT NULL,
-  `program_bantuan_id` int(11) NOT NULL,
-  `calon_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `kriteria`
 --
 
@@ -214,18 +201,6 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`id`, `nama`, `email`, `username`, `password`, `level`) VALUES
 (1, 'Administrator', 'admin@gmail.com', 'admin', '0192023a7bbd73250516f069df18b500', 'superadmin');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `program_bantuan`
---
-
-CREATE TABLE `program_bantuan` (
-  `id` int(11) NOT NULL,
-  `jenis_program` varchar(255) NOT NULL,
-  `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -320,14 +295,6 @@ ALTER TABLE `calon_subkriteria`
   ADD KEY `subkriteria_id` (`subkriteria_id`);
 
 --
--- Indexes for table `hasil_seleksi`
---
-ALTER TABLE `hasil_seleksi`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `program_bantuan_id` (`program_bantuan_id`),
-  ADD KEY `calon_id` (`calon_id`);
-
---
 -- Indexes for table `kriteria`
 --
 ALTER TABLE `kriteria`
@@ -340,12 +307,6 @@ ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`),
   ADD UNIQUE KEY `email` (`email`);
-
---
--- Indexes for table `program_bantuan`
---
-ALTER TABLE `program_bantuan`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `subkriteria`
@@ -371,12 +332,6 @@ ALTER TABLE `calon_subkriteria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=996;
 
 --
--- AUTO_INCREMENT for table `hasil_seleksi`
---
-ALTER TABLE `hasil_seleksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
@@ -387,12 +342,6 @@ ALTER TABLE `kriteria`
 --
 ALTER TABLE `pengguna`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `program_bantuan`
---
-ALTER TABLE `program_bantuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `subkriteria`
@@ -416,13 +365,6 @@ ALTER TABLE `calon`
 ALTER TABLE `calon_subkriteria`
   ADD CONSTRAINT `FK__calon` FOREIGN KEY (`calon_id`) REFERENCES `calon` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK__subkriteria` FOREIGN KEY (`subkriteria_id`) REFERENCES `subkriteria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `hasil_seleksi`
---
-ALTER TABLE `hasil_seleksi`
-  ADD CONSTRAINT `hasil_seleksi_ibfk_1` FOREIGN KEY (`program_bantuan_id`) REFERENCES `program_bantuan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `hasil_seleksi_ibfk_2` FOREIGN KEY (`calon_id`) REFERENCES `calon` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `subkriteria`

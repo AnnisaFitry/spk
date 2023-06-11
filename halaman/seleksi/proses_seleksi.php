@@ -17,6 +17,7 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <form action="index.php?url=hasil_seleksi" method="POST">
+                            <!-- <form> -->
                                 <div class="col-lg-12">
                                     <table class="table table-bordered">
                                     <thead>
@@ -25,13 +26,7 @@
                                             <th rowspan="2" style="vertical-align: middle;">Kriteria</th>
                                             <th rowspan="2" style="vertical-align: middle;">Bobot</th>
                                             <th rowspan="2" style="vertical-align: middle;">Jenis</th>
-                                            <!-- <th width="100" rowspan="2" style="vertical-align: middle;">Tipe</th>
-                                            <th colspan="2" style="text-align: center">Parameter</th> -->
                                         </tr>
-                                        <!-- <tr>
-                                            <th width="140" class="text-center">q</th>
-                                            <th width="140" class="text-center">p</th>
-                                        </tr> -->
                                     </thead>
                                     <tbody>
                                     <?php $x= 1; ?>
@@ -41,19 +36,6 @@
                                                 <td><?php echo $key ?></td>
                                                 <td><?php echo $value['bobot']/$data_kriteria['ekstra']['total_bobot'];?></td>
                                                 <td><?php echo  $value['jenis'] ?></td>
-                                                <!-- <td>
-                                                    <select class=" form-control" name="tipe[<?php //echo $value['id'] ?>]">
-                                                        <option value="">Tipe</option>
-                                                        <option value="2">2</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <input class="form-control" type="number" step="0.1" name="q[<?php //echo $value['id'] ?>]" placeholder="Parameter q" required>
-                                                </td>
-                                                <td>
-                                                    <input class="form-control" type="number" step="0.1" name="p[<?php //echo $value['id'] ?>]" placeholder="Parameter p" required>
-                                                </td> -->
                                             </tr>
                                        <?php endforeach ?>
                                     </tbody>
