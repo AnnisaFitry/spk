@@ -8,5 +8,5 @@ if (mysqli_query($koneksi, "DELETE FROM PENGGUNA where id= '$id'"))
 else
 	$_SESSION['pesan'] = "Gagal hapus data pengguna";
 
-header('location:/spk_pro/index.php?url=data_pengguna');
+header('location:/spk/index.php?url=data_pengguna');
  ?>

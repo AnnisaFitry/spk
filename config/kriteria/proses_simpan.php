@@ -28,7 +28,7 @@ if(mysqli_query($koneksi,$sql)){
 }
 
 
-header('location:/spk_pro/index.php?url=data_kriteria');
+header('location:/spk/index.php?url=data_kriteria');
 
 
  ?>

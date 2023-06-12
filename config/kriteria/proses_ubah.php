@@ -14,7 +14,7 @@ if(mysqli_query($koneksi,$sql)){
 }else{
 	$_SESSION['pesan'] = "Gagal tambah data kriteria";
 }
-header('location:/spk_pro/index.php?url=data_kriteria');
+header('location:/spk/index.php?url=data_kriteria');
 
 
  ?>

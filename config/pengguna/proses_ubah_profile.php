@@ -27,6 +27,6 @@ else{
 	}
 }
 
-header('location:/spk_pro/index.php?url=pengaturan');
+header('location:/spk/index.php?url=pengaturan');
 
  ?>

@@ -29,7 +29,8 @@ if(mysqli_query($koneksi,$sql)){
 }else{
 	$_SESSION['pesan'] = "Gagal tambah data calon";
 }
-header('location:/spk_pro/index.php?url=data_calon');
+header('location:/spk/index.php?url=data_calon');
+
 
 
  ?>

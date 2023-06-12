@@ -8,5 +8,5 @@ if (mysqli_query($koneksi, "DELETE FROM CALON where id= '$id'"))
 else
 	$_SESSION['pesan'] = "Gagal hapus data calon";
 
-header('location:/spk_pro/index.php?url=data_calon');
+	header('location:/spk/index.php?url=data_calon');
  ?>
