@@ -9,5 +9,5 @@ if (mysqli_query($koneksi, "DELETE FROM subkriteria where id= '$id'"))
 else
 	$_SESSION['pesan'] = "Gagal hapus data subsubkriteria";
 
-header('location:/spk_pro/index.php?url=data_kriteria_lihat&id='.$kriteria_id);
+header('location:/spk/index.php?url=data_kriteria_lihat&id='.$kriteria_id);
  ?>

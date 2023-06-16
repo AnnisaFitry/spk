@@ -20,7 +20,7 @@ if(mysqli_query($koneksi,$sql)){
 }
 
 
-header('location:/spk_pro/index.php?url=data_kriteria_lihat&id='.$kriteria_id);
+header('location:/spk/index.php?url=data_kriteria_lihat&id='.$kriteria_id);
 
 
  ?>
