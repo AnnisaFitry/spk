@@ -11,11 +11,9 @@ foreach ($data_kriteria['data'] as $key_kriteria => $value_kriteria) {
     $y = 1;
     //Jarak Kriteria
     foreach ($data_calon['data'] as $key_calon_y => $value_calon_y) {
-        $tmp_bobot_y = $value_calon_y['kriteria'][$key_kriteria]['nama_subkriteria'] == 'input' ? $value_calon_y['kriteria'][$key_kriteria]['value'] : $value_calon_y['kriteria'][$key_kriteria]['bobot_subkriteria'];
-
+        $tmp_bobot_y = ($value_calon_y['kriteria'][$key_kriteria]['nama_subkriteria'] == 'input' ? $value_calon_y['kriteria'][$key_kriteria]['value'] : $value_calon_y['kriteria'][$key_kriteria]['bobot_subkriteria'])/50;
         foreach ($data_calon['data'] as $key_calon_x => $value_calon_x) {
-            $tmp_bobot_x = $value_calon_x['kriteria'][$key_kriteria]['nama_subkriteria'] == 'input' ? $value_calon_x['kriteria'][$key_kriteria]['value'] : $value_calon_x['kriteria'][$key_kriteria]['bobot_subkriteria'];
-
+            $tmp_bobot_x = ($value_calon_x['kriteria'][$key_kriteria]['nama_subkriteria'] == 'input' ? $value_calon_x['kriteria'][$key_kriteria]['value'] : $value_calon_x['kriteria'][$key_kriteria]['bobot_subkriteria'])/50;
             $jka = $tmp_bobot_x - $tmp_bobot_y;
             $jarak_kriteria[$key_kriteria]['A' . $y][] = $jka;
 
