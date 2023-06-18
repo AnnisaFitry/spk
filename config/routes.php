@@ -96,6 +96,8 @@ if(isset($_GET['url'])){
 			$req[] = 'config/proses_seleksi/load_kriteria.php';
 			$req[] = 'config/proses_seleksi/load_calon.php';
 			$req[] = 'config/pro/fungsi_preferensi.php';
+			$req[] = 'config/pro/min.php';
+			$req[] = 'config/pro/max.php';
 			$req[] = 'config/proses_seleksi/proses_seleksi.php';
 			$include[] = 'halaman/seleksi/hasil_seleksi.php';
 			break;

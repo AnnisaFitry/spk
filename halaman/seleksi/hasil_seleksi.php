@@ -65,7 +65,7 @@
                 <div class="col-lg-12">
                     <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#result">Hasil Seleksi</a></li>
-                    <li><a data-toggle="tab" href="#ranking">Ranking</a></li>
+                    <li><a data-toggle="tab" href="#ranking">Presensi Agregasi</a></li>
                     <li><a data-toggle="tab" href="#kecocokan">Matriks Keputusan Alternatif</a></li>
                     <?php foreach ($data_kriteria['data'] as $key => $value): ?>
                         <li><a data-toggle="tab" href="#<?php echo $value['id'] ?>"><?php echo $value['nama'] ?></a></li>
@@ -111,7 +111,7 @@
                             </div>
                     </div>
                     <div id="ranking" class="tab-pane fade">
-                        <h3>Tabel Ranking</h3>
+                        <h3>Tabel Presensi Agregasi</h3>
                             <div class="panel panel-info">
                                 <!-- /.panel-heading -->
                                 <div class="panel-body table-responsive">
@@ -174,7 +174,6 @@
                         </div>
                         <!-- /.panel-body -->
                     </div>
-                    </div>
 
                     <?php foreach ($data_kriteria['data'] as $key_k => $value_k): ?>
                         <div id="<?php echo $value_k['id'] ?>" class="tab-pane fade">
@@ -206,7 +205,7 @@
                                 </div>
                                 <!-- /.panel-body table-responsive -->
                             </div>
-                            <h3>Tabel H (d) <?php echo $value_k['nama']; ?></h3>
+                            <h3>Tabel Evaluasi Presensi <?php echo $value_k['nama']; ?></h3>
                             <div class="panel panel-info">
                                 <!-- /.panel-heading -->
                                 <div class="panel-body table-responsive">
